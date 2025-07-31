@@ -12,36 +12,45 @@
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: #fff;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      color: #333;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      animation: fadeInBody 1.2s ease-in-out;
+    }
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     .container {
-      background: rgba(255, 255, 255, 0.1);
+      background: #ffffffcc;
       padding: 40px;
       border-radius: 20px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       max-width: 600px;
       width: 90%;
       text-align: center;
+      animation: slideUp 1s ease-in-out;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
     h1 {
-      font-size: 36px;
+      font-size: 32px;
       margin-bottom: 20px;
-      color: #00ffd9;
+      color: #0066cc;
     }
     p {
       font-size: 18px;
-      color: #f1f1f1;
+      color: #444;
     }
     a.download {
       display: inline-block;
-      background: linear-gradient(135deg, #00ffd9, #007bff);
-      color: #000;
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      color: #fff;
       padding: 15px 35px;
       border-radius: 50px;
       text-decoration: none;
@@ -49,10 +58,16 @@
       font-weight: bold;
       margin-top: 25px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: pulse 2s infinite;
     }
     a.download:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 20px #00ffd9;
+      box-shadow: 0 8px 20px rgba(255, 75, 43, 0.3);
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
     .social {
       margin-top: 30px;
@@ -60,23 +75,23 @@
     .social p {
       font-size: 16px;
       margin-bottom: 10px;
-      color: #e0e0e0;
+      color: #333;
     }
     .social a {
       display: inline-block;
       margin: 5px 10px;
-      color: #00ffd9;
+      color: #0066cc;
       font-size: 16px;
       text-decoration: none;
+      transition: color 0.3s;
     }
     .social a:hover {
-      text-decoration: underline;
-      color: #ffffff;
+      color: #003366;
     }
     footer {
       margin-top: 25px;
       font-size: 14px;
-      color: #ccc;
+      color: #666;
     }
   </style>
 </head>
